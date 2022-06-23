@@ -8,6 +8,7 @@ public class Drone_04 : MonoBehaviour
     private GameObject Boom;
     private GameObject boom;
     private Transform dropSpot;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,13 +16,14 @@ public class Drone_04 : MonoBehaviour
         StartCoroutine(Shoot());
     }
 
-    IEnumerator Shoot(){
-        while(true)
+    IEnumerator Shoot()
+    {
+        while (true)
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(4f);
             boom = Instantiate(Boom);
             boom.transform.position = dropSpot.position;
-            boom.GetComponent<Rigidbody2D>().velocity= new Vector2(-4,0);
+            boom.GetComponent<Rigidbody2D>().velocity = new Vector2(-4, 0);
         }
     }
 }

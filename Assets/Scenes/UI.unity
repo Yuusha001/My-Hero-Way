@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 1061890874}
   - component: {fileID: 1061890873}
   - component: {fileID: 1061890872}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 1306625230}
   - component: {fileID: 1306625229}
   - component: {fileID: 1306625228}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -500,7 +500,7 @@ GameObject:
   - component: {fileID: 1667328280}
   - component: {fileID: 1667328282}
   - component: {fileID: 1667328281}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -522,9 +522,9 @@ RectTransform:
   m_Father: {fileID: 1061890875}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -468, y: 193}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 492, y: -314}
   m_SizeDelta: {x: 1383.78, y: 750.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1667328281
@@ -620,7 +620,7 @@ GameObject:
   - component: {fileID: 1830609091}
   - component: {fileID: 1830609093}
   - component: {fileID: 1830609092}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -642,10 +642,10 @@ RectTransform:
   m_Father: {fileID: 1061890875}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 555, y: 230}
-  m_SizeDelta: {x: 502.07, y: 127}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -405, y: 230}
+  m_SizeDelta: {x: 502.07007, y: 127}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1830609092
 MonoBehaviour:
@@ -822,7 +822,7 @@ GameObject:
   - component: {fileID: 2090348146}
   - component: {fileID: 2090348148}
   - component: {fileID: 2090348147}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -844,9 +844,9 @@ RectTransform:
   m_Father: {fileID: 1061890875}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -82.068, y: -3.2901}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 877.932, y: -510.2901}
   m_SizeDelta: {x: 2155.6, y: 1143.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2090348147

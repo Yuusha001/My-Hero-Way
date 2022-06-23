@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet1 : MonoBehaviour
+public class ChasingBullet : MonoBehaviour
 {
     [HideInInspector]
     public int speed;
@@ -14,6 +14,7 @@ public class Bullet1 : MonoBehaviour
     Player target;
     Vector2 moveDir;
     GameObject ex;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,22 +22,29 @@ public class Bullet1 : MonoBehaviour
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         target = GameObject.FindObjectOfType<Player>();
-        moveDir = (target.transform.position - transform.position).normalized*speed;
-        rb2D.velocity = new Vector2(moveDir.x,moveDir.y);
+        moveDir = (target.transform.position - transform.position).normalized * speed;
+        Vector3 direction = transform.position - target.transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        rb2D.velocity = new Vector2(moveDir.x, moveDir.y);
         Explosion = transform.GetChild(0).gameObject;
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-         if(other.gameObject.CompareTag("Player")){ 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
             sr.sprite = null;
             Explosion.transform.position = transform.position;
             Explosion.SetActive(true);
-            StartCoroutine(destroy());
+            Invoke("destroy", 0.2f);
         }
+        else
+            return;
     }
 
-    IEnumerator destroy(){
-        yield return new WaitForSeconds(0.2f);
+    void destroy()
+    {
         Destroy(gameObject);
     }
 }
